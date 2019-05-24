@@ -38,7 +38,6 @@ fetch(`https://theblackwomanhistory.firebaseio.com/.json`)
         } else {
             img.setAttribute('src', './img/img-mulher.png')
         } */
-
         
         //  PRIMEIRO
         if (mulher.metadata) {
@@ -58,6 +57,10 @@ fetch(`https://theblackwomanhistory.firebaseio.com/.json`)
         let name = document.createElement('p');
         name.innerHTML = mulher.title
         box.appendChild(name)
+
+
+
+
         
     });
 })
