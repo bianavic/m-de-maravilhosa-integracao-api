@@ -1,5 +1,34 @@
 const maravilhosas = document.querySelector('.maravilhosas__box')
 
+
+const botao = document.createElement("button");
+botao.textContent = "✖";
+botao.setAttribute("data-id", usuario.id)
+box.appendChild(botao)
+
+botao.addEventListener("click", () => {
+    const thisBox = botao.parentElement;            
+    const boxPai = thisBox.parentElement;            
+
+    fetch("https://reqres.in/api/users", {
+        method: 'DELETE',
+        headers:{
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            "id": botao.getAttribute("data-id")
+        })
+    })
+    .then(() =>{
+        cardPai.removeChild(thisCard)
+    })
+    .catch((erro) =>{
+        console.log(erro)
+    })
+})
+
+
 fetch(`http://localhost:5001/maravilhosas`)
 .then((response) => {
     return response.json()
