@@ -1,6 +1,24 @@
 const maravilhosas = document.querySelector('.maravilhosas__box')
+(mulheres-maravilhosas-cadastro)
 
-fetch(`https://theblackwomanhistory.firebaseio.com/.json`)
+// POST METHOD
+const form = new Form();
+let name = document.querySelector('input[type="file"]');
+
+formData.append('username', 'abc123');
+formData.append('avatar', fileField.files[0]);
+
+fetch('https://example.com/profile/avatar', {
+  method: 'PUT',
+  body: formData
+})
+.then(response => response.json())
+.catch(error => console.error('Error:', error))
+.then(response => console.log('Success:', JSON.stringify(response)));
+
+// GET METHOD:
+
+fetch(`http://localhost:5001/maravilhosas`)
 .then((response) => {
     return response.json()
 })
